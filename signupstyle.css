@@ -17,7 +17,8 @@ body {
 }
 
 .container {
-    width: 350px;
+    width: 90vw;
+    max-width: 450px;
     background: rgba(32, 32, 38, 0.9);
     color: white;
     border-radius: 20px;
@@ -125,7 +126,7 @@ body {
     height: 40px;
     border: none;
     outline: none;
-    background: #616161;
+    background: transparent;
     color: #EEEE;
     border-radius: 30px;
     border: 1px solid #E0E0E0;
