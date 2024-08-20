@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url("asset/cinema-bg.jpg");
+    background: url("asset/register-bg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -44,7 +44,7 @@ body {
     font-size: 13px;
 }
 
-#username, #password {
+#username, #password, #passcfr {
     margin-top: 5px;
 }
 
@@ -83,7 +83,7 @@ body {
     font-size: 20px;
 }
 
-.container .signup-forgot {
+.container .login {
     display: flex;
     justify-content: space-between;
     font-size: 13px;
@@ -92,12 +92,12 @@ body {
     color: #E0E0E0;
 }
 
-.signup-forgot a {
+.login a {
     text-decoration: none;
     color: white;
 }
 
-.signup-forgot a:hover {
+.login a:hover {
     color: maroon;
 }
 
@@ -132,7 +132,7 @@ body {
     cursor: pointer;
     font-size: 13px;
     margin-top: -35px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
