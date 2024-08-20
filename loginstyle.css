@@ -17,11 +17,11 @@ body {
 }
 
 .container {
-    width: 390px;
-    background: rgba(32, 32, 38, 0.8);
+    width: 350px;
+    background: rgba(32, 32, 38, 0.9);
     color: white;
     border-radius: 20px;
-    padding: 30px 40px;
+    padding: 30px 20px;
 }
 
 .container img {
@@ -40,7 +40,7 @@ body {
 .container p {
     text-align: center;
     margin: 20px 0;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 #username, #password {
@@ -55,7 +55,7 @@ body {
 }
 
 .input-box label {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .input-box input {
@@ -68,7 +68,7 @@ body {
     color: #E0E0E0;
     padding-left: 15px;
     padding-right: 50px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .input-box input::placeholder {
@@ -85,7 +85,7 @@ body {
 .container .signup-forgot {
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
+    font-size: 13px;
     margin-top: -10px;
     margin-bottom: 20px;
     color: #E0E0E0;
@@ -110,7 +110,7 @@ body {
     border-radius: 30px;
     border: 1px solid #E0E0E0;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .container .button:hover {
@@ -127,7 +127,7 @@ body {
     border-radius: 30px;
     border: 1px solid #E0E0E0;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 13px;
     margin-top: -35px;
     margin-bottom: 20px;
 }
