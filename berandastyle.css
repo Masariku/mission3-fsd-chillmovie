@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato',sans-serif;
+    background-color: pink;
+}
+
+/* style navbar desktop */
+.navbar {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background-color: #202026;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    position: fixed;
+}
+
+/* style navigation */
+.navbar .navigator {
+    background: transparent;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.navigator a,.logo {
+    background: transparent;
+    text-decoration: none;
+    color: white;
+}
+
+.logo img {
+    background: transparent;
+}
+
+.logo img:hover {
+    background: transparent;
+    cursor: pointer;
+}
+
+.navigator a:hover {
+    background: transparent;
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+    text-shadow: 0px 0px 10px #0586FF;
+}
+
+/* style avatar */
+.navbar .profile {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    background-color: transparent;
+    margin-right: 5%;
+    gap: 10px;
+}
+
+.profile img {
+    background: transparent;
+}
+
+.profile i {
+    font-size: 0.8em;
+    color: white;
+    background: transparent;
+}
+
+.profile i:hover {
+    transition: .3s;
+    text-shadow: 0px 0px 10px #0586FF;
+    cursor: pointer;
+}
+
+.profdrop {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    font-size: 15px;
+    width: 140px;
+    padding: 0px 5px 5px 8px;
+    background-color: #202026;
+    top: 45px;
+    right: 20px;
+    border: 1px solid #505061;
+    border-radius: 5px;
+}
+
+.profdrop .proflist {
+    margin: 15px 0;
+    background: transparent;
+}
+
+.proflist a {
+    text-decoration: none;
+    background: transparent;
+    color: white;
+}
+
+.proflist a:hover {
+    transition: .3s;
+    color:  #0586FF;
+    cursor: pointer;
+}
+
+.profile:hover .profdrop {
+    display: block;
+}
+
+@media (max-width: 750px) {
+    /* style navbar mobile */
+    .navbar {
+        font-size: 11px;
+    }
+    
+    .logo .movtxt {
+        display: none;
+    }
+
+    .profdrop {
+        font-size: 11px;
+        width: 120px;
+    }
+}
