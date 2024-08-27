@@ -15,7 +15,6 @@
     justify-content: space-between;
     align-items: center;
     font-size: 16px;
-    position: fixed;
 }
 
 /* style navigation */
@@ -112,6 +111,95 @@
     display: block;
 }
 
+/* style main */
+.main {
+    display: flex;
+    border: 2px solid black;
+    background: red;
+    font-size: 1em;
+    height: 100vh;
+}
+
+.main .hero {
+    background: linear-gradient(0deg, rgba(32,32,38,1) 20%, rgba(32,32,38,0.8) 60%, rgba(255,255,255,0) 100%),url('asset/heroposter.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.hero h1 {
+    background: transparent;
+    width: 40%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-left: 10%;
+    font-size: 2.5em;
+}
+
+.hero .synopsis {
+    background: transparent;
+    width: 40%;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    padding-left: 10%;
+}
+
+.hero .herobtn {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding-left: 10%;
+    column-gap: 15px;
+    color: white;
+}
+
+.herobtn button {
+    background: transparent;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 0;
+}
+
+.herobtn button:hover {
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 1px -1px 15px 2px rgba(124,192,255,0.62);
+    -webkit-box-shadow: 1px -1px 15px 2px rgba(124,192,255,0.62);
+    -moz-box-shadow: 1px -1px 15px 2px rgba(124,192,255,0.62);
+}
+
+.herobtn .startbtn {
+    background-color: #024DB7;
+}
+
+.herobtn .morebtn {
+    background-color: grey;
+}
+
+.bx-info-circle, .bxs-volume-mute, .rated {
+    background-color: transparent;
+}
+
+.herobtn .rated {
+    border-radius: 20px;
+    border: 2px solid grey;
+    padding: 10px;
+}
+
+.herobtn .mute {
+    border: 2px solid grey;
+    justify-self: flex-end;
+    padding: 10px;
+}
+
+
 @media (max-width: 750px) {
     /* style navbar mobile */
     .navbar {
@@ -125,5 +213,37 @@
     .profdrop {
         font-size: 11px;
         width: 120px;
+    }
+
+    /* style hero mobile */
+
+
+    .hero h1 {
+        width: 100%;
+        font-size: 2em;
+        padding-left: 5%;
+    }
+
+    .hero .synopsis {
+        width: 100%;
+        height: 100px;
+        padding-right: 5%;
+        padding-left: 5%;
+        font-size: 0.8em;
+        margin-bottom: 2px;
+    }
+
+    .hero .herobtn {
+        padding-left: 5%;
+        column-gap: 8px;
+    }
+    
+    .herobtn button {
+        font-size: 0.8em;
+        padding: 8px 15px;
+    }
+    
+    .herobtn .rated {
+        font-size: 0.8em;
     }
 }
