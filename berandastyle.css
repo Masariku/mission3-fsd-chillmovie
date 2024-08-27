@@ -114,22 +114,26 @@
 /* style main */
 .main {
     display: flex;
-    border: 2px solid black;
     background: red;
     font-size: 1em;
-    height: 100vh;
+    height: 100%;
+    flex-direction: column;
 }
 
+/* style hero section */
 .main .hero {
     background: linear-gradient(0deg, rgba(32,32,38,1) 20%, rgba(32,32,38,0.8) 60%, rgba(255,255,255,0) 100%),url('asset/heroposter.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100%;
+    width: 100%; 
+    min-height: 600px;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding-bottom: 20px;
+    padding-left: 8%;
 }
 
 .hero h1 {
@@ -137,23 +141,20 @@
     width: 40%;
     margin-top: 5px;
     margin-bottom: 10px;
-    padding-left: 10%;
     font-size: 2.5em;
 }
 
 .hero .synopsis {
     background: transparent;
-    width: 40%;
+    width: 50%;
     margin-top: 5px;
     margin-bottom: 40px;
-    padding-left: 10%;
 }
 
 .hero .herobtn {
     display: flex;
     align-items: center;
     background-color: transparent;
-    padding-left: 10%;
     column-gap: 15px;
     color: white;
 }
@@ -180,7 +181,7 @@
 }
 
 .herobtn .morebtn {
-    background-color: grey;
+    background-color: rgb(56, 56, 56);
 }
 
 .bx-info-circle, .bxs-volume-mute, .rated {
@@ -195,10 +196,107 @@
 
 .herobtn .mute {
     border: 2px solid grey;
-    justify-self: flex-end;
+    margin-left: auto;
+    margin-right: 10%;
     padding: 10px;
 }
 
+/* style resume watch */
+.main h2 {
+    background: transparent;
+    margin: 50px 0 10px 8%;
+    color: white;
+}
+
+.main .lscppstr {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 24%;
+    overflow-x: auto;
+    gap: 20px;
+    margin: 0 6%;
+    padding: 10px 20px 0 20px;
+    min-height: 210px;
+    background: transparent;
+    mask-image: linear-gradient(90deg, rgba(32,32,38,0) 0%, rgba(32,32,38,1) 3%, rgba(32,32,38,1) 97%, rgba(32,32,38,0) 100%);
+}
+
+.lscppstr .list1 {
+    background: transparent;
+    position: relative;
+}
+
+.list1 img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    background: transparent;
+    mask-image: linear-gradient(180deg, rgba(32,32,38,1) 20%, rgba(32,32,38,0.8) 60%, rgba(255,255,255,0.2) 100%);
+}
+
+.list1 .title {
+    background: transparent;
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    color: white;
+}
+
+.list1 .rating {
+    background: transparent;
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+    color: white;
+}
+
+.rating i {
+    background: transparent;
+}
+
+/* style top rated trending rilis baru */
+.main .ptrtpstr {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 15.8%;
+    overflow-x: auto;
+    gap: 15px;
+    margin: 0 6%;
+    padding: 10px 20px 0 20px;
+    min-height: 400px;
+    background: transparent;
+    mask-image: linear-gradient(90deg, rgba(32,32,38,0) 0%, rgba(32,32,38,1) 3%, rgba(32,32,38,1) 97%, rgba(32,32,38,0) 100%);
+}
+
+.ptrtpstr .list2 {
+    background: transparent;
+    position: relative;
+}
+
+.list2 img {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    border-radius: 10px;
+    background: transparent;
+    object-fit: cover;
+    mask-image: linear-gradient(180deg, rgba(32,32,38,1) 20%, rgba(32,32,38,0.8) 60%, rgba(255,255,255,0.2) 100%);
+}
+
+.list2 .title {
+    background: transparent;
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    color: white;
+}
+
+.list2 .rating {
+    background: transparent;
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+    color: white;
+}
 
 @media (max-width: 750px) {
     /* style navbar mobile */
@@ -217,24 +315,28 @@
 
     /* style hero mobile */
 
+    .main .hero {
+        padding-left: 5%;
+        height: 500px;
+    }
 
     .hero h1 {
         width: 100%;
         font-size: 2em;
-        padding-left: 5%;
     }
 
     .hero .synopsis {
         width: 100%;
-        height: 100px;
+        height: 50px;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
         padding-right: 5%;
-        padding-left: 5%;
         font-size: 0.8em;
-        margin-bottom: 2px;
+        margin-bottom: 20px;
     }
 
     .hero .herobtn {
-        padding-left: 5%;
         column-gap: 8px;
     }
     
@@ -245,5 +347,37 @@
     
     .herobtn .rated {
         font-size: 0.8em;
+    }
+
+    /* style resume watch mobile */
+    .main h2 {
+        margin: 30px 0 10px 5%;
+        font-size: 20px;
+    }
+
+    .main .lscppstr {
+        grid-auto-columns: 100%;
+        min-height: 185px;
+        margin: 0 3%;
+        font-size: 13px;
+    }
+
+    /* style top rated trending rilis baru mobile */
+    .main .ptrtpstr {
+        grid-auto-columns: 35%;
+        min-height: 100px;
+        margin: 0 3%;
+        font-size: 13px;
+    }
+
+    .list2 .title {
+        left: 8px;
+        width: 50%;
+        bottom: 10px;
+    }
+    
+    .list2 .rating {
+        right: 8px;
+        bottom: 10px;
     }
 }
